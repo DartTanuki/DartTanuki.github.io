@@ -16,6 +16,23 @@ body {
     margin: 0;
     padding: 0;
     background-color: #131619;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex-space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.elements-wrapper {
+    width: 75%;
+    padding: 20px;
 }
 
 .result__button {
@@ -28,6 +45,9 @@ body {
     border-radius: 5px;
 }
 
+.result__button:hover {
+    background-color: #6D7074;
+}
 
 .title {
     color: white;
@@ -43,4 +63,45 @@ body {
 .flex {
     display: flex;
     justify-content: space-between;
+}
+
+.balance {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    height: 75px;
+    width: 35%;
+    border-radius: 5px;
+    padding: 10px auto;
+}
+
+.balance-wrapper {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.balance span {
+    text-transform: uppercase;
+    font-family: "FjallaOne", sans-serif;
+    font-size: 35px;
+}
+
+.lot-info-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid white;
+    width: 75%;
+}
+
+.lot-info {
+    font-family: "FjallaOne", sans-serif;
+    font-size: 30px;
+}
+
+.demo-icon {
+    width: 150px;
+    height: 150px;
 }
