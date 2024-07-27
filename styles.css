@@ -105,3 +105,18 @@ main {
     width: 150px;
     height: 150px;
 }
+
+.input-numbers {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+    font-size: 48px;
+    text-align: center;
+}
+
+.inputs-wrapper {
+    padding: 0 20px;
+    width: 100%;
+}
