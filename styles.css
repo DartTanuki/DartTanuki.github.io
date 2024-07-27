@@ -66,7 +66,7 @@ main {
 }
 
 .balance {
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     border: 1px solid white;
@@ -80,7 +80,7 @@ main {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 100vw;
 }
 
 .balance span {
@@ -113,15 +113,16 @@ main {
     background-color: transparent;
     padding: 20px;
     color: white;
-    font-size: 48px;
+    font-size: 40px;
     text-align: center;
+    width: auto;
 }
 
 .inputs-wrapper {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
 }
 
 .bet-buttons-wrapper {
@@ -139,9 +140,22 @@ main {
     border: 1px solid white;
     border-radius: 10px;
     padding: 10px;
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .bet-button:hover {
     background-color: grey;
+}
+
+
+@media (max-width: 1120px) {
+    .input-numbers {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+    .input-numbers {
+        font-size: 20px;
+    }
 }
