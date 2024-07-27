@@ -92,7 +92,8 @@ main {
 .lot-info-wrapper {
     display: flex;
     justify-content: center;
-    border: 1px solid white;
+    border: 2px solid white;
+    border-radius: 15px;
     width: 75%;
 }
 
@@ -118,5 +119,29 @@ main {
 
 .inputs-wrapper {
     padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.bet-buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
     width: 100%;
+    padding: 0px 60px;
+}
+
+.bet-button {
+    color: white;
+    font-family: "FjallaOne", sans-serif;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 48px;
+}
+
+.bet-button:hover {
+    background-color: grey;
 }
