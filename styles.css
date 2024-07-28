@@ -66,6 +66,7 @@ main {
 }
 
 .balance {
+    /* Flex - чтобы отцентрировать слово */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +81,7 @@ main {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
 }
 
 .balance span {
@@ -99,37 +100,37 @@ main {
 
 .lot-info {
     font-family: "FjallaOne", sans-serif;
-    font-size: 30px;
+    font-size: 26px;
 }
 
 .demo-icon {
-    width: 150px;
-    height: 150px;
+    width: 110px;
+    height: 110px;
 }
 
 .input-numbers {
     border: 1px solid white;
     border-radius: 10px;
     background-color: transparent;
-    padding: 20px;
+    padding: 5px 10px;
     color: white;
-    font-size: 40px;
+    font-size: 48px;
     text-align: center;
-    width: auto;
+    width: 350px;
 }
 
 .inputs-wrapper {
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85%;
 }
 
 .bet-buttons-wrapper {
     display: flex;
     justify-content: space-between;
     margin: 40px 0;
-    width: 100%;
+    width: 95%;
     padding: 0px 60px;
 }
 
@@ -147,15 +148,40 @@ main {
     background-color: grey;
 }
 
+.lottery-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    gap: 30px;
+}
 
-@media (max-width: 1120px) {
-    .input-numbers {
+.tutorial-rules {
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+
+    font-size: 38px;
+    font-family: "FjallaOne", sans-serif;
+}
+
+@media (max-width: 1050px) {
+    .bet-button {
         font-size: 30px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 810px) {
     .input-numbers {
-        font-size: 20px;
+        font-size: 38px;
+        width: 250px;
+    }
+
+    .demo-icon {
+        width: 75px;
+        height: 75px;
+    }
+
+    .bet-button {
+        font-size: 25px;
     }
 }
