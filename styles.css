@@ -164,6 +164,25 @@ main {
     font-family: "FjallaOne", sans-serif;
 }
 
+.bets-wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.bets-group {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 60px 400px;
+    grid-template-rows: 60px 60px 60px;
+    row-gap: 20px;
+    column-gap: 30px;
+}
+
+.bet {
+    border: 1px solid white;
+}
+
 @media (max-width: 1050px) {
     .bet-button {
         font-size: 30px;
