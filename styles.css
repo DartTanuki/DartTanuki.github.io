@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "FjallaOne";
-    src: url('fonts/FjallaOne-Regular.woff2');
+    font-family: "ConcertOne";
+    src: url("fonts/ConcertOne-Regular.woff2") format("woff2");
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -19,349 +19,79 @@ body {
     color: white;
 }
 
-main {
+.header__main-info {
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-family: "ConcertOne", sans-serif;
+
+    /* Решил в этом элементе сделать flex, где как раз подходит свойство space-between */
+    /* Исходя из макета проекта */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tutorial-info__wrapper {
+    width: 20vw;
+    height: 120px;
+    border: 1px solid white;
+
+    text-transform: uppercase;
+    font-size: 40px;
+    /* display: flex для центрирования текста относительно родителя. Умнее пока что не знаю способа :/ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results-make-pred__wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-.flex-space-between {
-    display: flex;
     justify-content: space-between;
-}
-
-.elements-wrapper {
-    width: 75%;
-    padding: 20px;
-}
-
-.result__button {
-    color: white;
-    font-family: "FjallaOne", sans-serif;
-    font-size: 20px;
-    background-color: transparent;
+    width: 40vw;
+    height: 150px;
     border: 1px solid white;
-    width: 50px;
-    border-radius: 5px;
 }
 
-.result__button:hover {
-    background-color: #6D7074;
-}
-
-.title {
-    color: white;
-    font-family: "FjallaOne", sans-serif;
-    font-size: 44px;
-}
-
-.container {
-    border: 1px solid white;
-    padding: 5px 15px;
-}
-
-.flex {
-    display: flex;
-    justify-content: space-between;
-}
-
-.balance {
-    /* Flex - чтобы отцентрировать слово */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid white;
-    height: 75px;
-    width: 35vw;
-    border-radius: 5px;
-    padding: 10px auto;
-}
-
-.balance-wrapper {
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.balance span {
-    text-transform: uppercase;
-    font-family: "FjallaOne", sans-serif;
-    font-size: 35px;
-}
-
-.lot-info-wrapper {
-    display: flex;
-    justify-content: center;
-    border: 2px solid white;
-    border-radius: 15px;
-    width: 75%;
-}
-
-.lot-info {
-    font-family: "FjallaOne", sans-serif;
-    font-size: 26px;
-}
-
-.lot-info p {
-    margin: 14px;
-}
-
-.elements-wrapper {
-    width: 75%;
-}
-.demo-icon {
-    width: 100px;
-    height: 100px;
-}
-
-.input-numbers {
+.results {
+    width: 80%;
+    height: 30%;
     border: 1px solid white;
     border-radius: 10px;
-    background-color: transparent;
-    padding: 5px 10px;
-    color: white;
-    font-size: 48px;
-    text-align: center;
-    width: 30vw;
-}
 
-.inputs-wrapper {
-    padding: 0 10px;
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-}
+    margin-left: auto;
+    margin-right: auto;
 
-.bet-buttons-wrapper {
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 0;
-    width: 90%;
-    padding: 0px 10px;
-}
-
-.bet-button {
-    color: white;
-    font-family: "FjallaOne", sans-serif;
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 10px;
-    width: 30vw;
-    padding: 5px 10px;
-    font-size: 38px;
-}
-
-.bet-button:hover {
-    background-color: grey;
-}
-
-.lottery-info-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 40%;
-    gap: 30px;
-}
-
-.tutorial-rules {
-    padding: 10px 15px;
-    border: 1px solid white;
-    border-radius: 15px;
-
-    font-size: 38px;
-    font-family: "FjallaOne", sans-serif;
-}
-
-.bets-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 90%;
-    padding: 0px 10px;
-}
-
-.bets-group {
-    margin-top: 40px;
-    display: grid;
-    /* 60px 400px */
-    /* 60px 60px 60px */
-    grid-template-columns: 60px 500px;
-    grid-template-rows: 60px 60px 60px;
-    row-gap: 20px;
-    column-gap: 20px;
-}
-
-#bets-group-second {
-    grid-template-columns: 500px 60px;
-}
-
-.bet {
-    border: 1px solid white;
     text-align: center;
     font-size: 40px;
-    font-family: "FjallaOne", sans-serif;
 }
 
-@media (max-width: 1150px) {
-    .bets-group {
-        grid-template-columns: 55px 350px;
-        grid-template-rows: repeat(3, 55px);
-    }
-    #bets-group-second {
-        grid-template-columns: 350px 55px;
-    }
-
-    .bet-button {
-        font-size: 34px;
-    }
-
-    .demo-icon {
-        width: 90px;
-        height: 90px;
-    }
+.make-prediction-text-in-header {
+    border: 1px solid white;
+    border-bottom: 4px solid white;
+    height: 50%;
+    text-align: center;
+    font-size: 46px;
 }
 
-@media (max-width: 1000px) {
-    .bets-group {
-        grid-template-columns: 50px 280px;
-        grid-template-rows: repeat(3, 55px);
-    }
-    #bets-group-second {
-        grid-template-columns: 280px 55px;
-    }
+.header__current_lot-info {
+    width: 80%;
+    height: 130px;
+    margin-inline: auto;
+    margin-bottom: 10px;
 
-    .bet-button {
-        font-size: 28px;
-    }
+    /* Как и раньше, flex для центрирования текста внутри родителя. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid white;
+    border-top: 4px solid white;
+    border-radius: 10px;
 
-    .demo-icon {
-        width: 80px;
-        height: 80px;
-    }
-
-    .balance span {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 830px) {
-    .bets-group {
-        grid-template-columns: 50px 230px;
-        grid-template-rows: repeat(3, 50px);
-    }
-
-    #bets-group-second {
-        grid-template-columns: 230px 50px;
-    }
-
-    .bet-button {
-        font-size: 20px;
-    }
-
-    .demo-icon {
-        width: 70px;
-        height: 70px;
-    }
-
-    .lot-info {
-        font-size: 22px;
-    }
-}
-
-@media (max-width: 720px) {
-    .bets-group {
-        grid-template-columns: 45px 200px;
-        grid-template-rows: repeat(3, 45px);
-    }
-
-    #bets-group-second {
-        grid-template-columns: 200px 45px;
-    }
-
-    .tutorial-rules {
-        font-size: 30px;
-    }
-
-    .bet-buttons-wrapper {
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 630px) {
-    .bets-group {
-        grid-template-columns: 40px 150px;
-        grid-template-rows: repeat(3, 45px);
-    }
-
-    #bets-group-second {
-        grid-template-columns: 150px 40px;
-    }
-
-    .demo-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .lot-info {
-        font-size: 20px;
-    }
-
-    .balance span {
-        font-size: 25px;
-    }
-
-    .title {
-        font-size: 38px;
-    }
-}
-
-@media (max-width: 510px) {
-    .bets-group {
-        grid-template-columns: 35px 120px;
-        grid-template-rows: repeat(3, 35px);
-    }
-
-    #bets-group-second {
-        grid-template-columns: 120px 35px;
-    }
-
-    .bet-button {
-        font-size: 16px;
-    }
-
-    .bet {
-        font-size: 30px;
-    }
-
-    .title {
-        font-size: 32px;
-    }
-
-    .tutorial-rules {
-        font-size: 25px;
-    }
-}
-
-@media (max-width: 430px) {
-    .bets-group {
-        grid-template-columns: 30px 100px;
-        grid-template-rows: repeat(3, 35px);
-    }
-
-    #bets-group-second {
-        grid-template-columns: 100px 30px;
-    }
-
-    .bet-button {
-        font-size: 14px;
-    }
-
-    .inputs-wrapper input{
-        font-size: 20px;
-    }
-
-    .demo-icon {
-        width: 50px;
-        height: 50px;
-    }
+    font-size: 30px;
+    font-family: "ConcertOne", sans-serif;
 }
