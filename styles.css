@@ -184,6 +184,10 @@ main {
     color: white;
 }
 
+.buy-button:hover {
+    background-color: grey;
+}
+
 .balance__wrapper {
     width: 400px;
     border: 1px solid white;
@@ -260,6 +264,13 @@ main {
     border-radius: 50%;
     width: 1em;
     height: 1em;
+
+    position: relative;
+    top: 4px;
+}
+
+#square-in-pred {
+    border-radius: 0%;
 }
 
 .bet-results__wrapper {
@@ -285,4 +296,97 @@ main {
 
 #bet-results-right {
     grid-template-columns: 1fr 60px;
+}
+
+/* Media Section */
+@media (max-width: 1200px) {
+    .balance__wrapper {
+        width: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .balance__wrapper {
+        width: 250px;
+    }
+
+    .do-prediction {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 900px) {
+    .balance__wrapper {
+        width: 200px;
+    }
+
+    .do-prediction {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 801px) {
+    .balance__wrapper {
+        width: 150px;
+    }
+
+    .do-prediction {
+        font-size: 22px;
+    }
+
+    .bet-results__wrapper {
+        grid-template-columns: 50px 1fr;
+        grid-template-rows: repeat(3, 50px);
+    }
+
+    #bet-results-right {
+        grid-template-columns: 1fr 50px;
+    }
+
+    .balance-text {
+        font-size: 22px;
+    }
+
+    .make-prediction-text-in-header, .tutorial-info__wrapper {
+        font-size: 36px;
+    }
+
+    .buy-balance__wrapper {
+        gap: 20px;
+    }
+
+    .make-prediction-button {
+        font-size: 35px;
+    }
+
+    .make-prediction-text {
+        font-size: 24px;
+    }
+
+    .buy-button {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 701px) {
+    .make-prediction-text-in-header, .tutorial-info__wrapper {
+        font-size: 32px;
+    }
+
+    .main-content-title {
+        font-size: 36px;
+    }
+
+    .header__current_lot-info {
+        font-size: 24px;
+    }
+
+    .do-prediction {
+        font-size: 18px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    
 }
