@@ -298,6 +298,89 @@ main {
     grid-template-columns: 1fr 60px;
 }
 
+
+.buy-modal-background {
+    width: 100vw;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0 0 0 / 0.8);
+    z-index: 100;
+}
+
+.buy-modal-active {
+    width: 30vw;
+    height: 50vh;
+
+    position: absolute;
+    top: calc(50% - 25vh);
+    right: calc(50% - 15vw);
+
+    background-color: white;
+    border-radius: 15px;
+
+    padding: 10px;
+}
+
+.buy-modal-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.buy-modal-title {
+    font-family: "ConcertOne", sans-serif;
+    text-transform: uppercase;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+
+    margin-bottom: 30px;
+}
+
+.buy-modal__main {
+    color: black;
+    font-family: "ConcertOne", sans-serif;
+    text-align: center;
+    font-size: 24px;
+
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    row-gap: 20px;
+    column-gap: 30px;
+    grid-template-rows: repeat(4, 55px);
+}
+
+.buy-modal__main div {
+    padding-top: 10px;
+    font-family: "ConcertOne", sans-serif;
+    border: 2px solid black;
+}
+
+.buy-modal__main button {
+    font-family: "ConcertOne", sans-serif;
+    font-size: 24px;
+    border: 2px solid black;
+    background-color: transparent;
+}
+
+.buy-modal__main button:hover{
+    background-color: grey;
+}
+
+.show-modal {
+    display: block;
+}
+
+.close-modal {
+    display: none;
+}
+
 /* Media Section */
 @media (max-width: 1200px) {
     .balance__wrapper {
