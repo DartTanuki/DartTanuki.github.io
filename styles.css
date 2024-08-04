@@ -317,12 +317,12 @@ main {
 }
 
 .buy-modal-active {
-    width: 30vw;
+    width: 50vw;
     height: 50vh;
 
     position: absolute;
     top: calc(50% - 25vh);
-    right: calc(50% - 15vw);
+    right: calc(50% - 25vw);
 
     background-color: white;
     border-radius: 15px;
@@ -552,6 +552,16 @@ main {
         grid-template-columns: 1fr 40px;
     }
     /* ############# */
+
+    /* Buy Modal */
+    .buy-modal__main, .buy-modal__main button {
+        font-size: 18px;
+    }
+
+    .buy-modal-title {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
 }
 
 @media (max-width: 490px) {
@@ -612,5 +622,45 @@ main {
 
     #bet-results-right {
         grid-template-columns: 1fr 35px;
+    }
+
+    .buy-modal__main div, .buy-modal__main button {
+        font-size: 18px;
+    }
+    
+    .buy-modal__main {
+        column-gap: 15px;
+    }
+
+    .buy-modal-title {
+        font-size: 34px;
+        margin-bottom: 15px;
+    }
+}
+
+/* MEDIA HEIGHT */
+@media (max-height: 850px) {
+    .buy-modal__main {
+        grid-template-columns: 2fr 3fr;
+        row-gap: 15px;
+        column-gap: 30px;
+        grid-template-rows: repeat(4, 50px);
+    }
+
+    /* .buy-modal-title {
+        margin-bottom: 15px;
+    } */
+}
+
+@media (max-height: 750px) {
+    .buy-modal__main {
+        grid-template-columns: 2fr 3fr;
+        row-gap: 15px;
+        column-gap: 35px;
+        grid-template-rows: repeat(4, 45px);
+    }
+
+    .buy-modal-title {
+        margin-bottom: 12px;
     }
 }
