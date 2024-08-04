@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Project ver. 2.0.</title>
+    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
 </head>
 <body>
     <header>
@@ -67,7 +68,7 @@
                 <div id="square">1</div>
             </div>
             <div class="buy-balance__wrapper">
-                <div class="balance__wrapper">
+                <div class="balance__wrapper" id="right-balance">
                     <p class="balance-text">Your Balance</p>
                     <div class="balance-status">0</div>
                 </div>
@@ -113,5 +114,12 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <!-- Ниже копипаст из документации по подключению кошелька TON -->
+    <script>
+        const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://https://darttanuki.github.io/tonconnect-manifest.json',
+            buttonRootId: 'ton-connect'
+        });
+    </script>
 </body>
 </html>

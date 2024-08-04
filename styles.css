@@ -32,7 +32,7 @@ main {
 }
 
 .header__main-info {
-    border: 1px solid white;
+    /* border: 1px solid white;  OFF DEV MODE */
     padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -65,7 +65,7 @@ main {
     justify-content: space-between;
     width: 40vw;
     height: 110px;
-    border: 1px solid white;
+    /* border: 1px solid white; OFF DEV MODE*/
 }
 
 .results {
@@ -141,11 +141,11 @@ main {
     align-items: center;
     border: 5px solid white;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    margin-right: 20px;
+    width: 2em;
+    height: 2em;
+    margin-right: 10px;
     font-family: "ConcertOne", sans-serif;
-    font-size: 20px;
+    font-size: 30px;
 
     position: relative;
     bottom: 5px;
@@ -156,15 +156,15 @@ main {
     justify-content: center;
     align-items: center;
 
-    width: 60px;
-    height: 60px;
+    width: 2em;
+    height: 2em;
     border: 5px solid white;
-    font-size: 20px;
+    font-size: 30px;
 
     font-family: "ConcertOne", sans-serif;
 }
 
-.elements-rate-info {
+.elements-rate {
     font-size: 40px;
     font-family: "ConcertOne", sans-serif;
 }
@@ -190,7 +190,12 @@ main {
 
 .balance__wrapper {
     width: 400px;
-    border: 1px solid white;
+    /* border: 1px solid white; OFF DEV MODE */
+    margin-right: 5px;
+}
+
+#right-balance {
+    margin-left: 5px;
 }
 
 .balance-text {
@@ -214,7 +219,7 @@ main {
 
 .input-section__wrapper {
     margin-top: 30px;
-    border: 1px solid white;
+    /* border: 1px solid white; OFF DEV MODE */
 
     width: 75%;
     font-family: "Poppins", sans-serif;
@@ -435,7 +440,7 @@ main {
     }
 
     .buy-balance__wrapper {
-        gap: 20px;
+        gap: 15px;
     }
 
     .make-prediction-button {
@@ -470,6 +475,142 @@ main {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 601px) {
+    /* ### HEADER ### */
+    /* Равными делаем шрифты кнопок Make Prediction, Rules и Tutorial */
+    .make-prediction-text-in-header, .tutorial-info__wrapper {
+        font-size: 24px;
+    }
+
+    /* Кнопка "Results" */
+    .results {
+        font-size: 22px;
+    }
+
+    /* Инфа о том, что нужно предсказать. внутри два параграфа */
+    .header__current_lot-info {
+        font-size: 22px;
+    }
+    /* ############### */
+
+    /* #### MAIN #### */
+    /* Заголовок TON Prediction / Stars Prediction */
+    .main-content-title {
+        font-size: 32px;
+    }
     
+    .elements-rate {
+        font-size: 32px;
+    }
+
+    .elements-rate #circle {
+        margin-right: 0px;
+        font-size: 24px;
+    }
+
+    .elements-rate #square {
+        font-size: 24px;
+    }
+
+    .balance__wrapper {
+        width: 120px;
+    }
+
+    .balance-text {
+        font-size: 18px;
+    }
+
+    .buy-button {
+        font-size: 20px;
+    }
+
+    .make-prediction-button {
+        font-size: 28px;
+    }
+
+    .make-prediction-text {
+        font-size: 22px;
+    }
+
+    .buy-balance__wrapper {
+        gap: 8px;
+    }
+
+    .do-prediction {
+        font-size: 15px;
+        height: 50px;
+        margin-block: 24px;
+    }
+
+    .bet-results__wrapper {
+        grid-template-columns: 40px 1fr;
+        grid-template-rows: repeat(3, 40px);
+        gap: 10px;
+    }
+
+    #bet-results-right {
+        grid-template-columns: 1fr 40px;
+    }
+    /* ############# */
+}
+
+@media (max-width: 490px) {
+    .make-prediction-text-in-header, .tutorial-info__wrapper {
+        font-size: 21px;
+    }
+
+    .main-content-title {
+        font-size: 26px;
+    }
+
+    .elements-rate {
+        font-size: 26px;
+    }
+
+    .elements-rate #circle, .elements-rate #square{
+        font-size: 18px;
+        border: 3px solid white;
+    }
+
+    .balance__wrapper {
+        width: 110px;
+    }
+
+    .balance-text {
+        font-size: 14px;
+    }
+
+    .buy-button {
+        font-size: 18px;
+    }
+
+    .balance-status {
+        height: 40px;
+        font-size: 20px;
+    }
+
+    .make-prediction-button {
+        font-size: 24px;
+        height: 40px;
+    }
+
+    .make-prediction-text {
+        font-size: 18px;
+    }
+
+    .do-prediction {
+        font-size: 14px;
+        height: 50px;
+        margin-block: 18px;
+    }
+
+    .bet-results__wrapper {
+        grid-template-columns: 35px 1fr;
+        grid-template-rows: repeat(3, 35px);
+        gap: 10px;
+    }
+
+    #bet-results-right {
+        grid-template-columns: 1fr 35px;
+    }
 }
