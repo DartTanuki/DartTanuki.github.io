@@ -5,95 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Project ver. 2.0.</title>
-    <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+    <!-- <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script> -->
 </head>
 <body>
-    <header>
-        <div class="header__main-info">
-            <div class="tutorial-info__wrapper">
-                tutorial
+    <!-- New Maket. Making Project. -->
+     <main>
+        <div class="first-block">
+            <div class="project-title">BLACK SANTA</div>
+            <div class="game-info">
+                Make predictions of 6 numbers in line, put your Tickets on them till
+                the last prediction day. Win. Get TON! Easy!
             </div>
-            <div class="results-make-pred__wrapper">
-                <div class="results">
-                    Results
+            <div class="rules-tutorial__wrapper">
+                <div class="nice-text">What's going on???!??!?</div>
+                <div class="arrow">
+                    <div></div>
                 </div>
-                <div class="make-prediction-text-in-header">
-                    Make prediction
-                </div>
+                <button class="rules-tutorial-button">Rules/Tutorial</button>
             </div>
-            <div class="tutorial-info__wrapper">
-                rules
+            <div class="rules-tutorial__wrapper" id="rules-tutorial-second">
+                <div class="nice-text">Clear! When?</div>
+                <div class="arrow">
+                    <div></div>
+                </div>
+                <button class="rules-tutorial-button" id="none-touch">2024/12/29 last prediction day</button>
             </div>
         </div>
-        <div class="header__current_lot-info">
-            <p>Последние 4 цифры курса TON к USDT?</p>
-            <p>22.02.2022  00:00:00</p>
+        <div class="second-block">
+            <div class="tickets-balance__wrapper">
+                <div class="tickets-balance-text">My Tickets Balance</div>
+                <div class="square"></div>
+                <div class="balance">0</div>
+            </div>
+            <button class="buy-tickets">Buy Tickets</button>
         </div>
-    </header>
-    <main>
-        <div class="splitted-main-content">
-            <h2 class="main-content-title">STARS Prediction</h2>
-            <div class="elements-rate">
-                <div id="circle">1</div>
-                <span class="elements-rate-info">= 50 stars</span>
+        <div class="third-block">
+            <div class="my-prediction__wrapper">
+                <div class="my-prediction-text">My prediction</div>
+                <input maxlength="6" class="make-prediction-input">
             </div>
-            <div class="buy-balance__wrapper">
-                <button class="buy-button">Buy Coin</button>
-                <div class="balance__wrapper">
-                    <p class="balance-text">Your Balance</p>
-                    <div class="balance-status">0</div>
-                </div>
+            <div class="make-prediction__wrapper">
+                <button class="make-prediction-button">Make prediction(Minimum 1 ticket)</button>
+                <input class="tickets-amount" value="0">
             </div>
-            <div class="input-section__wrapper">
-                <p class="make-prediction-text">Input Prediction</p>
-                <input class="make-prediction-button" maxlength="4"></input>
-            </div>
-            <button class="do-prediction">
-                Make prediction = 1
-                <div class="circle-in-pred"></div>
-            </button>
-            <div class="bet-results__wrapper">
-                <div>1</div>
-                <div></div>
-                <div>2</div>
-                <div></div>
-                <div>3</div>
-                <div></div>
-            </div>
+            <button class="my-predictions">My Predictions</button>
         </div>
-        <div class="splitted-main-content">
-            <h2 class="main-content-title">TON Prediction</h2>
-            <div class="elements-rate">
-                <span class="elements-rate-info">0.1 TON = </span>
-                <div id="square">1</div>
-            </div>
-            <div class="buy-balance__wrapper">
-                <div class="balance__wrapper" id="right-balance">
-                    <p class="balance-text">Your Balance</p>
-                    <div class="balance-status">0</div>
-                </div>
-                <button class="buy-button" id="buy-ton">Buy Ticket</button>
-            </div>
-            <div class="input-section__wrapper">
-                <p class="make-prediction-text">Input Prediction</p>
-                <input class="make-prediction-button" maxlength="4"></input>
-            </div>
-            <button class="do-prediction">
-                Make prediction = 1
-                <div class="circle-in-pred" id="square-in-pred"></div>
-            </button>
-            <div class="bet-results__wrapper" id="bet-results-right">
-                <div></div>
-                <div>1</div>
-                <div></div>
-                <div>2</div>
-                <div></div>
-                <div>3</div>
-            </div>
-        </div>
-    </main>
+     </main>
 
-    <div class="buy-modal-background show-modal">
+    <div class="buy-modal-background close-modal">
         <div class="buy-modal-active">
             <div class="buy-modal-close">
                 <img src="icons/cancelCross2.ico" alt="Cancel">
@@ -115,11 +74,11 @@
     </div>
     <script src="script.js"></script>
     <!-- Ниже копипаст из документации по подключению кошелька TON -->
-    <script>
+    <!-- <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://https://darttanuki.github.io/tonconnect-manifest.json',
             buttonRootId: 'ton-connect'
         });
-    </script>
+    </script> -->
 </body>
 </html>

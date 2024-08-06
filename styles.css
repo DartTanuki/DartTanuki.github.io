@@ -20,6 +20,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 40px;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -28,281 +32,291 @@ body {
 }
 
 main {
-    display: flex;
+    padding: 10px;
 }
 
-.header__main-info {
-    /* border: 1px solid white;  OFF DEV MODE */
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+.first-block, .second-block, .third-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-block {
+    height: 45vh;
+    border-bottom: 1px solid white;
+}
+
+.second-block {
+    height: 25vh;
+    border-bottom: 1px solid white;
+}
+
+.third-block {
+    height: calc(30vh - 5px);
+    border-bottom: 4px solid white;
+}
+
+.project-title {
+    width: 30%;
 
     font-family: "ConcertOne", sans-serif;
+    font-size: 1rem;
 
-    /* Решил в этом элементе сделать flex, где как раз подходит свойство space-between */
-    /* Исходя из макета проекта */
+    border: 1px solid white;
+    text-align: center;
+}
+
+.game-info {
+    width: 80%;
+
+    font-size: 0.8rem;
+    font-family: "ConcertOne", sans-serif;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    margin-block: 20px;
+    padding: 5px 10px;
+}
+
+.nice-text {
+    border: 1px solid white;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+
+    /* Центрирование текста */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 60px;
+    font-size: 0.75rem;
+
+}
+
+.arrow {
+    cursor: pointer;
+    position: relative;
+    width: 150px;
+    height: 50px;
+}
+
+.arrow div {
+    position: relative;
+    top: 20px;
+    width: 150px;
+    height: 10px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    left:0;
+    display: block;
+}
+.arrow div::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: -11px;
+    right: -8px;
+    background-color: white;
+    transform: rotate(45deg);
+}
+.arrow div::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 10px;
+    top: 11px;
+    right: -8px;
+    background-color: white;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    transform: rotate(-45deg);
+}
+
+.rules-tutorial__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 10px;
+    width: 90%;
+}
+
+.rules-tutorial-button {
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+
+    font-size: 0.65rem;
+    font-family: "Poppins", sans-serif;
+
+    width: 35%;
+}
+
+.rules-tutorial-button:hover {
+    background-color: grey;
+}
+
+#none-touch:hover {
+    background-color: transparent;
+}
+
+#rules-tutorial-second {
+    margin-top: 60px;
+}
+
+.tickets-balance__wrapper {
+    margin-top: 20px;
+
+    width: 90%;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.tutorial-info__wrapper {
-    width: 20vw;
-    height: 80px;
-    border: 1px solid white;
-
-    text-transform: uppercase;
-    font-size: 40px;
-    /* display: flex для центрирования текста относительно родителя. Умнее пока что не знаю способа :/ */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.results-make-pred__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40vw;
-    height: 110px;
-    /* border: 1px solid white; OFF DEV MODE*/
-}
-
-.results {
-    width: 80%;
-    height: 40%;
-    border: 1px solid white;
-    border-radius: 10px;
-
-    margin-left: auto;
-    margin-right: auto;
-
-    text-align: center;
-    font-size: 28px;
-}
-
-.make-prediction-text-in-header {
-    border: 1px solid white;
-    border-bottom: 3px solid white;
-    height: 50%;
-    text-align: center;
-    font-size: 40px;
-}
-
-.header__current_lot-info {
-    width: 80%;
-    height: 130px;
-    margin-inline: auto;
-    margin-bottom: 10px;
-    
-    text-align: center;
-    /* Как и раньше, flex для центрирования текста внутри родителя. */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    
-    border: 1px solid white;
-    border-top: 2px solid white;
-    border-radius: 20px;
-
-    font-size: 30px;
-    font-family: "ConcertOne", sans-serif;
-}
-
-.header__current_lot-info p {
-    margin-top: 15px;
-}
-
-.splitted-main-content {
-    /* Внутри большого блока каждый элемент будем центрировать */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+.tickets-balance-text {
     width: 50%;
-    height: 100%;
-    border: 1px solid white;
 
-}
-
-.main-content-title {
-    text-align: center;
-    font-family: "ConcertOne", sans-serif;
-    font-size: 40px;
-
-    margin-top: 5px;
-}
-
-#circle {
-    /* Как и прежде, здесь flex для центрирования внутреннего текста по центру. */
-    /* inline для того, чтобы след.элементы шли в ряд. */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    border: 5px solid white;
-    border-radius: 50%;
-    width: 2em;
-    height: 2em;
-    margin-right: 10px;
-    font-family: "ConcertOne", sans-serif;
-    font-size: 30px;
-
-    position: relative;
-    bottom: 5px;
-}
-
-#square {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 2em;
-    height: 2em;
-    border: 5px solid white;
-    font-size: 30px;
-
-    font-family: "ConcertOne", sans-serif;
-}
-
-.elements-rate {
-    font-size: 40px;
-    font-family: "ConcertOne", sans-serif;
-}
-
-.buy-balance__wrapper {
-    display: flex;
-    margin-top: 20px;
-    gap: 30px;
-}
-
-.buy-button {
-    background-color: transparent;
     border: 1px solid white;
     border-radius: 10px;
 
-    font-size: 28px;
-    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.buy-button:hover {
+.square {
+    border: 1px solid white;
+    width: 50px;
+    height: 50px;
+}
+
+.balance {
+    width: 35%;
+
+    border: 1px solid white;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 0.75rem;
+
+}
+
+.buy-tickets {
+    margin-top: 40px;
+
+    width: 90%;
+    height: 35%;
+    border: 1px solid white;
+    border-radius: 10px;
+
+    background-color: transparent;
+
+    font-size: 0.75rem;
+    font-family: "ConcertOne", sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-tickets:hover {
     background-color: grey;
 }
 
-.balance__wrapper {
-    width: 400px;
-    /* border: 1px solid white; OFF DEV MODE */
-    margin-right: 5px;
+.my-prediction__wrapper {
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
 }
 
-#right-balance {
-    margin-left: 5px;
-}
-
-.balance-text {
-    text-align: center;
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    font-size: 26px;
-}
-
-.balance-status {
-    margin-top: 10px;
-    height: 50px;
+.my-prediction-text {
+    width: 50%;
     border: 1px solid white;
+    border-radius: 10px;
 
-    /* Центрирование текста внутри div */
+    font-family: "ConcertOne", sans-serif;
+    font-size: 0.75rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
 }
 
-.input-section__wrapper {
-    margin-top: 30px;
-    /* border: 1px solid white; OFF DEV MODE */
+.make-prediction-input {
+    width: 40%;
 
-    width: 75%;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+.make-prediction__wrapper {
+    margin-top: 30px;
+
+    width: 90%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.make-prediction-button, .tickets-amount {
+    border: 1px solid white;
+    border-radius: 10px;
+    color: white;
+    background-color: transparent;
+
+    font-size: 0.7rem;
     font-family: "Poppins", sans-serif;
+    text-align: center;
 }
 
 .make-prediction-button {
-    margin-top: 5px;
-
-    width: 100%;
-    height: 60px;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 15px;
-
-    color: white;
-    font-size: 40px;
-    text-align: center;
+    width: 50%;
 }
 
-.make-prediction-text {
-    text-align: center;
-    margin: 0;
-    font-size: 28px;
-}
-
-.do-prediction {
-    margin-block: 35px;
-
-    width: 75%;
-    height: 80px;
-
-    background-color: transparent;
-    border: 2px solid white;
-
-    font-size: 30px;
-    font-family: "Poppins", sans-serif;
-    color: white;
-}
-
-.do-prediction:hover {
+.make-prediction-button:hover {
     background-color: grey;
 }
 
-.circle-in-pred {
-    display: inline-block;
+.tickets-amount {
+    width: 40%;
+}
+
+.my-predictions {
+    margin-top: 40px;
+
+    width: 90%;
+    background-color: transparent;
     border: 1px solid white;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
+    border-radius: 10px;
+    color: white;
 
-    position: relative;
-    top: 4px;
+    font-size: 0.8rem;
+    font-family: "Poppins", sans-serif;
 }
 
-#square-in-pred {
-    border-radius: 0%;
+.my-predictions:hover {
+    background-color: grey;
 }
-
-.bet-results__wrapper {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-template-rows: repeat(3, 60px);
-    gap: 20px;
-    border: 1px solid white;
-}
-
-.bet-results__wrapper div {
-    border: 1px solid white;
-
-    /* Центрирование текста внутри родителя. По старинке. */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-family: "ConcertOne", sans-serif;
-    font-size: 26px;
-}
-
-#bet-results-right {
-    grid-template-columns: 1fr 60px;
-}
-
 
 .buy-modal-background {
     width: 100vw;
@@ -384,283 +398,4 @@ main {
 
 .close-modal {
     display: none;
-}
-
-/* Media Section */
-@media (max-width: 1200px) {
-    .balance__wrapper {
-        width: 300px;
-    }
-}
-
-@media (max-width: 1000px) {
-    .balance__wrapper {
-        width: 250px;
-    }
-
-    .do-prediction {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 900px) {
-    .balance__wrapper {
-        width: 200px;
-    }
-
-    .do-prediction {
-        font-size: 26px;
-    }
-}
-
-@media (max-width: 801px) {
-    .balance__wrapper {
-        width: 150px;
-    }
-
-    .do-prediction {
-        font-size: 22px;
-    }
-
-    .bet-results__wrapper {
-        grid-template-columns: 50px 1fr;
-        grid-template-rows: repeat(3, 50px);
-    }
-
-    #bet-results-right {
-        grid-template-columns: 1fr 50px;
-    }
-
-    .balance-text {
-        font-size: 22px;
-    }
-
-    .make-prediction-text-in-header, .tutorial-info__wrapper {
-        font-size: 36px;
-    }
-
-    .buy-balance__wrapper {
-        gap: 15px;
-    }
-
-    .make-prediction-button {
-        font-size: 35px;
-    }
-
-    .make-prediction-text {
-        font-size: 24px;
-    }
-
-    .buy-button {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 701px) {
-    .make-prediction-text-in-header, .tutorial-info__wrapper {
-        font-size: 32px;
-    }
-
-    .main-content-title {
-        font-size: 36px;
-    }
-
-    .header__current_lot-info {
-        font-size: 24px;
-    }
-
-    .do-prediction {
-        font-size: 18px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 601px) {
-    /* ### HEADER ### */
-    /* Равными делаем шрифты кнопок Make Prediction, Rules и Tutorial */
-    .make-prediction-text-in-header, .tutorial-info__wrapper {
-        font-size: 24px;
-    }
-
-    /* Кнопка "Results" */
-    .results {
-        font-size: 22px;
-    }
-
-    /* Инфа о том, что нужно предсказать. внутри два параграфа */
-    .header__current_lot-info {
-        font-size: 22px;
-    }
-    /* ############### */
-
-    /* #### MAIN #### */
-    /* Заголовок TON Prediction / Stars Prediction */
-    .main-content-title {
-        font-size: 32px;
-    }
-    
-    .elements-rate {
-        font-size: 32px;
-    }
-
-    .elements-rate #circle {
-        margin-right: 0px;
-        font-size: 24px;
-    }
-
-    .elements-rate #square {
-        font-size: 24px;
-    }
-
-    .balance__wrapper {
-        width: 120px;
-    }
-
-    .balance-text {
-        font-size: 18px;
-    }
-
-    .buy-button {
-        font-size: 20px;
-    }
-
-    .make-prediction-button {
-        font-size: 28px;
-    }
-
-    .make-prediction-text {
-        font-size: 22px;
-    }
-
-    .buy-balance__wrapper {
-        gap: 8px;
-    }
-
-    .do-prediction {
-        font-size: 15px;
-        height: 50px;
-        margin-block: 24px;
-    }
-
-    .bet-results__wrapper {
-        grid-template-columns: 40px 1fr;
-        grid-template-rows: repeat(3, 40px);
-        gap: 10px;
-    }
-
-    #bet-results-right {
-        grid-template-columns: 1fr 40px;
-    }
-    /* ############# */
-
-    /* Buy Modal */
-    .buy-modal__main, .buy-modal__main button {
-        font-size: 18px;
-    }
-
-    .buy-modal-title {
-        font-size: 34px;
-        margin-bottom: 15px;
-    }
-}
-
-@media (max-width: 490px) {
-    .make-prediction-text-in-header, .tutorial-info__wrapper {
-        font-size: 21px;
-    }
-
-    .main-content-title {
-        font-size: 26px;
-    }
-
-    .elements-rate {
-        font-size: 26px;
-    }
-
-    .elements-rate #circle, .elements-rate #square{
-        font-size: 18px;
-        border: 3px solid white;
-    }
-
-    .balance__wrapper {
-        width: 110px;
-    }
-
-    .balance-text {
-        font-size: 14px;
-    }
-
-    .buy-button {
-        font-size: 18px;
-    }
-
-    .balance-status {
-        height: 40px;
-        font-size: 20px;
-    }
-
-    .make-prediction-button {
-        font-size: 24px;
-        height: 40px;
-    }
-
-    .make-prediction-text {
-        font-size: 18px;
-    }
-
-    .do-prediction {
-        font-size: 14px;
-        height: 50px;
-        margin-block: 18px;
-    }
-
-    .bet-results__wrapper {
-        grid-template-columns: 35px 1fr;
-        grid-template-rows: repeat(3, 35px);
-        gap: 10px;
-    }
-
-    #bet-results-right {
-        grid-template-columns: 1fr 35px;
-    }
-
-    .buy-modal__main div, .buy-modal__main button {
-        font-size: 18px;
-    }
-    
-    .buy-modal__main {
-        column-gap: 15px;
-    }
-
-    .buy-modal-title {
-        font-size: 34px;
-        margin-bottom: 15px;
-    }
-}
-
-/* MEDIA HEIGHT */
-@media (max-height: 850px) {
-    .buy-modal__main {
-        grid-template-columns: 2fr 3fr;
-        row-gap: 15px;
-        column-gap: 30px;
-        grid-template-rows: repeat(4, 50px);
-    }
-
-    /* .buy-modal-title {
-        margin-bottom: 15px;
-    } */
-}
-
-@media (max-height: 750px) {
-    .buy-modal__main {
-        grid-template-columns: 2fr 3fr;
-        row-gap: 15px;
-        column-gap: 35px;
-        grid-template-rows: repeat(4, 45px);
-    }
-
-    .buy-modal-title {
-        margin-bottom: 12px;
-    }
 }
