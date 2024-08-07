@@ -281,7 +281,7 @@ main {
     color: white;
 
     text-align: center;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
 }
 
 .make-prediction__wrapper {
@@ -299,7 +299,6 @@ main {
     color: white;
     background-color: transparent;
 
-    font-size: 0.65rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
@@ -315,6 +314,7 @@ main {
 
 .tickets-amount {
     width: 40%;
+    font-size: 0.75rem;
 }
 
 .my-predictions {
@@ -521,5 +521,34 @@ main {
 @media (max-width: 385px) {
     html {
         font-size: 18px;
+    }
+}
+
+/* HEIGHT MEDIA */
+@media (max-height: 750px) {
+    .my-predictions {
+        margin-top: 15px;
+    }
+
+    .make-prediction__wrapper {
+        margin-top: 15px;
+    }
+
+    .my-prediction__wrapper {
+        margin-top: 15px;
+    }
+
+    .buy-tickets {
+        margin-top: 25px;
+    }
+
+    #rules-tutorial-second {
+        margin-top: 25px;
+    }
+}
+
+@media (max-height: 680px) {
+    .game-info {
+        margin-bottom: 10px;
     }
 }
