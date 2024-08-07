@@ -58,19 +58,22 @@ main {
 }
 
 .project-title {
-    width: 30%;
-
+    width: 40%;
+    height: 15%;
     font-family: "ConcertOne", sans-serif;
     font-size: 1rem;
 
     border: 1px solid white;
-    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-info {
     width: 80%;
-
-    font-size: 0.8rem;
+    height: 22%;
+    font-size: 0.75rem;
     font-family: "ConcertOne", sans-serif;
 
     border: 1px solid white;
@@ -78,6 +81,10 @@ main {
 
     margin-block: 20px;
     padding: 5px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nice-text {
@@ -91,22 +98,22 @@ main {
     align-items: center;
 
     width: 50%;
-    height: 60px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 
 }
 
 .arrow {
+    position: relative;
     cursor: pointer;
     position: relative;
-    width: 150px;
+    width: 10%;
     height: 50px;
 }
 
 .arrow div {
     position: relative;
     top: 20px;
-    width: 150px;
+    width: 100%;
     height: 10px;
     background-color: white;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
@@ -123,6 +130,8 @@ main {
     background-color: white;
     transform: rotate(45deg);
 }
+
+/* Нижняя - before. Верхняя - after */
 .arrow div::before {
     content: '';
     position: absolute;
@@ -142,6 +151,8 @@ main {
 
     margin-top: 10px;
     width: 90%;
+    height: 16%;
+
 }
 
 .rules-tutorial-button {
@@ -160,19 +171,23 @@ main {
     background-color: grey;
 }
 
+#none-touch {
+    font-size: 0.6rem;
+}
+
 #none-touch:hover {
     background-color: transparent;
 }
 
 #rules-tutorial-second {
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 .tickets-balance__wrapper {
     margin-top: 20px;
 
     width: 90%;
-
+    height: 25%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -195,7 +210,6 @@ main {
 .square {
     border: 1px solid white;
     width: 50px;
-    height: 50px;
 }
 
 .balance {
@@ -223,7 +237,7 @@ main {
 
     background-color: transparent;
 
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-family: "ConcertOne", sans-serif;
     color: white;
 
@@ -237,11 +251,12 @@ main {
 }
 
 .my-prediction__wrapper {
-    margin-top: 30px;
+    margin-top: 20px;
 
     display: flex;
     justify-content: space-between;
     width: 90%;
+    height: 18%;
 }
 
 .my-prediction-text {
@@ -270,10 +285,10 @@ main {
 }
 
 .make-prediction__wrapper {
-    margin-top: 30px;
+    margin-top: 25px;
 
     width: 90%;
-
+    height: 25%;
     display: flex;
     justify-content: space-between;
 }
@@ -284,13 +299,14 @@ main {
     color: white;
     background-color: transparent;
 
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-family: "Poppins", sans-serif;
     text-align: center;
 }
 
 .make-prediction-button {
     width: 50%;
+    font-size: 0.6rem;
 }
 
 .make-prediction-button:hover {
@@ -302,15 +318,16 @@ main {
 }
 
 .my-predictions {
-    margin-top: 40px;
+    margin-top: 20px;
 
     width: 90%;
+    height: 25%;
     background-color: transparent;
     border: 1px solid white;
     border-radius: 10px;
     color: white;
 
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-family: "Poppins", sans-serif;
 }
 
@@ -398,4 +415,111 @@ main {
 
 .close-modal {
     display: none;
+}
+
+@media (max-width: 1100px){
+    html {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 960px) {
+    html {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 820px) {
+    html {
+        font-size: 30px;
+    }
+
+    .arrow div, .arrow div::before, .arrow div::after{
+        height: 7px;
+    }
+
+    /* Нижняя - before. Верхняя - after */
+    .arrow div::after {
+        top: -8px;
+        width: 30px;
+    }
+
+    .arrow div::before {
+        top: 8px;
+        width: 30px;
+    }
+
+    .arrow {
+        top: 5px;
+    }
+
+}
+
+@media (max-width: 620px) {
+    html {
+        font-size: 26px;
+    }
+
+    .project-title {
+        font-size: 0.9rem;
+    }
+
+    .square {
+        width: 30px;
+    }
+}
+
+@media (max-width: 500px) {
+    html {
+        font-size: 24px;
+    }
+    
+    .arrow div, .arrow div::before, .arrow div::after{
+        height: 5px;
+    }
+
+    /* Нижняя - before. Верхняя - after */
+    .arrow div::after {
+        top: -6px;
+        width: 20px;
+        right: -7px;
+    }
+
+    .arrow div::before {
+        top: 6px;
+        width: 20px;
+        right: -7px;
+    }
+
+    .arrow {
+        top: 5px;
+        right: 3px;
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        font-size: 22px;
+    }
+
+    .buy-tickets {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 422px) {
+    html {
+        font-size: 20px;
+    }
+
+    .rules-tutorial-first {
+        font-size: 0.6rem;
+    }
+
+}
+
+@media (max-width: 385px) {
+    html {
+        font-size: 18px;
+    }
 }
