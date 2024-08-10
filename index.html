@@ -49,8 +49,8 @@
                 <input class="tickets-amount" value="1">
             </div>
             <button class="my-predictions">My Predictions</button>
+            <div id="ton-connect"></div>
         </div>
-        <div id="ton-connect"></div>
      </main>
 
     <div class="buy-modal-background close-modal">
@@ -73,20 +73,17 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
     <!-- Ниже копипаст из документации по подключению кошелька TON -->
-    <script>
+     <script>
         const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
             manifestUrl: 'https://darttanuki.github.io/tonconnect-manifest.json',
             buttonRootId: 'ton-connect'
         });
 
         tonConnectUI.uiOptions = {
-            language: 'ru',
-            uiPreferences: {
-            theme: THEME.DARK
-            }
+            language: 'ru'
         };
-    </script>
+     </script>
+     <script src="script.js"></script>
 </body>
 </html>
