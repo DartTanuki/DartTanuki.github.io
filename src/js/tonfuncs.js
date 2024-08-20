@@ -26,7 +26,7 @@ function startTonFunc() {
     rules_button.addEventListener('click', async () => {
         try {
             const result = await tonConnection.sendTransaction(
-                createTransaction('UQBEVadLtLh0qALy2ZOloJXroeYsQF6-2Il_2umAqymawQy2', 200000)
+                createTransaction('UQAVICOlX__5e9utdXpVApiGnqKIG5nZo0wXSpWnLStDvCL8', 200000)
             );
         } catch (e) {
             console.error(e);
