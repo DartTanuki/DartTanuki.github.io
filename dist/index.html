@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../src/styles.css">
     <title>Project ver. 3.0.</title>
     <!-- <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script> -->
 </head>
@@ -21,7 +21,7 @@
                 <div class="arrow">
                     <div></div>
                 </div>
-                <button class="rules-tutorial-button">Rules/Tutorial</button>
+                <button class="rules-tutorial-button" id="rules-1">Rules/Tutorial</button>
             </div>
             <div class="rules-tutorial__wrapper" id="rules-tutorial-second">
                 <div class="nice-text">Clear! When?</div>
@@ -48,7 +48,7 @@
                 <button class="make-prediction-button">Make prediction(Minimum 1 ticket)</button>
                 <input class="tickets-amount" value="1">
             </div>
-            <button class="my-predictions">My Predictions</button>
+            <button class="my-predictions" id="my-predictons">My Predictions</button>
             <div id="ton-connect"></div>
         </div>
      </main>
@@ -56,7 +56,7 @@
     <div class="buy-modal-background close-modal">
         <div class="buy-modal-active">
             <div class="buy-modal-close">
-                <img src="icons/cancelCross2.ico" alt="Cancel">
+                <img src="../src/assets/icons/cancelCross2.ico" alt="Cancel">
             </div>
             <div class="buy-modal-content">
                 <h2 class="buy-modal-title">shop</h2>
@@ -84,6 +84,6 @@
             language: 'ru'
         };
      </script> -->
-     <script src="script.js"></script>
+     <script src="main.js"></script>
 </body>
 </html>
