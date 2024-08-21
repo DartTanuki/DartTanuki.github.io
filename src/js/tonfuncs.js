@@ -1,13 +1,13 @@
 import { tonConnection } from "./tonconnection.js";
 
 function startTonFunc() {
-    function createTransaction(to_address, amount) {
+    function createTransaction(amount) {
         const transaction = {
             validUntil: Math.floor(Date.now() / 1000) + 60, // 60 sec
             messages: [
                 {
-                    address: "EQBBJBB3HagsujBqVfqeDUPJ0kXjgTPLWPFFffuNXNiJL0aA",
-                    amount: "200000",
+                    address: 'UQBEVadLtLh0qALy2ZOloJXroeYsQF6-2Il_2umAqymawQy2',
+                    amount: amount,
                  // stateInit: "base64bocblahblahblah==" // just for instance. Replace with your transaction initState or remove
                 }
             ]
@@ -24,29 +24,14 @@ function startTonFunc() {
     });
 
     rules_button.addEventListener('click', async () => {
-        try {
-            const transaction = {
-                validUntil: Math.floor(Date.now() / 1000) + 60, // 60 sec
-                messages: [
-                    {
-                        address: "EQBBJBB3HagsujBqVfqeDUPJ0kXjgTPLWPFFffuNXNiJL0aA",
-                        amount: "200000",
-                     // stateInit: "base64bocblahblahblah==" // just for instance. Replace with your transaction initState or remove
-                    },
-                    {
-                        address: "EQDmnxDMhId6v1Ofg_h5KR5coWlFG6e86Ro3pc7Tq4CA0-Jn",
-                        amount: "200000",
-                     // payload: "base64bocblahblahblah==" // just for instance. Replace with your transaction payload or remove
-                    }
-                ]
-            }
+        const currentIsConnectedStatus = tonConnection.connected;
+        
+        if (!currentIsConnectedStatus) {
+            alert('Please connect your wallet to create transaction!');
+        } else {
+            alert('Your wallet is connected! Enjoy!');
+            const transaction = createTransaction(200000);      
             const result = await tonConnection.sendTransaction(transaction);
-
-            const someTxData = await myAppExplorerService.getTransaction(result.boc);
-            alert('Transaction was sent successfully', someTxData);
-
-        } catch (e) {
-            console.error(e);
         }
     });
 }
