@@ -9,11 +9,6 @@ function startTonFunc() {
                     address: "EQBBJBB3HagsujBqVfqeDUPJ0kXjgTPLWPFFffuNXNiJL0aA",
                     amount: "200000",
                  // stateInit: "base64bocblahblahblah==" // just for instance. Replace with your transaction initState or remove
-                },
-                {
-                    address: "EQDmnxDMhId6v1Ofg_h5KR5coWlFG6e86Ro3pc7Tq4CA0-Jn",
-                    amount: "200000",
-                 // payload: "base64bocblahblahblah==" // just for instance. Replace with your transaction payload or remove
                 }
             ]
         }
@@ -46,10 +41,11 @@ function startTonFunc() {
                 ]
             }
             const result = await tonConnection.sendTransaction(
-                transaction, 200000);
+                createTransaction('UQBEVadLtLh0qALy2ZOloJXroeYsQF6-2Il_2umAqymawQy2', 200000));
+
             const someTxData = await myAppExplorerService.getTransaction(result.boc);
             alert('Transaction was sent successfully', someTxData);
-            
+
         } catch (e) {
             console.error(e);
         }
