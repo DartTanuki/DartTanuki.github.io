@@ -6,7 +6,7 @@ function startTonFunc() {
             validUntil: Math.floor(Date.now() / 1000) + 60, // 60 sec
             messages: [
                 {
-                    address: 'UQCq4u9JZdtLXrIkSfOV2-mLIYl7qvsJ3rsPGvkWt16O76Om',
+                    address: 'UQD9nUcG-Ed5fK4gxnSYYIclAe8gi9gxWXgVl_ARMw20C8BC',
                     amount: amount,
                  // stateInit: "base64bocblahblahblah==" // just for instance. Replace with your transaction initState or remove
                 }
