@@ -29,9 +29,9 @@ function startTonFunc() {
         if (!currentIsConnectedStatus) {
             alert('Please connect your wallet to create transaction!');
         } else {
-            alert('Your wallet is connected! Enjoy!');
             const transaction = createTransaction(200000);      
             const result = await tonConnection.sendTransaction(transaction);
+            alert(transaction.address);
         }
     });
 }
