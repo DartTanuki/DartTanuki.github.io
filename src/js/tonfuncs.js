@@ -31,7 +31,9 @@ function startTonFunc() {
         } else {
             const transaction = createTransaction(200000);      
             const result = await tonConnection.sendTransaction(transaction);
-            alert(transaction.address);
+            alert(result);
+            const someTxData = await myAppExplorerService.getTransaction(result.boc);
+            alert('Transaction was sent successfully', someTxData);
         }
     });
 }
