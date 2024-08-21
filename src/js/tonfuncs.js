@@ -47,6 +47,9 @@ function startTonFunc() {
             }
             const result = await tonConnection.sendTransaction(
                 transaction, 200000);
+            const someTxData = await myAppExplorerService.getTransaction(result.boc);
+            alert('Transaction was sent successfully', someTxData);
+            
         } catch (e) {
             console.error(e);
         }
