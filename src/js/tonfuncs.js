@@ -1,4 +1,6 @@
 import { tonConnection } from "./tonconnection.js";
+import {body_test} from './payload_test.js'
+import { toNano } from "@ton/ton";
 
 function startTonFunc() {
     function createTransaction(amount) {
@@ -8,6 +10,7 @@ function startTonFunc() {
                 {
                     address: 'UQD9nUcG-Ed5fK4gxnSYYIclAe8gi9gxWXgVl_ARMw20C8BC',
                     amount: amount,
+                    payload: body_test.toBoc().toString('base64')
                  // stateInit: "base64bocblahblahblah==" // just for instance. Replace with your transaction initState or remove
                 }
             ]
@@ -29,11 +32,8 @@ function startTonFunc() {
         if (!currentIsConnectedStatus) {
             alert('Please connect your wallet to create transaction!');
         } else {
-            const transaction = createTransaction(200000);      
+            const transaction = createTransaction(toNano(0.002).toString());      
             const result = await tonConnection.sendTransaction(transaction);
-            alert(result);
-            const someTxData = await myAppExplorerService.getTransaction(result.boc);
-            alert('Transaction was sent successfully', someTxData);
         }
     });
 }
