@@ -11,7 +11,10 @@
     <!-- New Maket. Making Project. -->
      <main>
         <div class="first-block">
-            <div class="project-title">BLACK SANTA</div>
+            <div class="project-title-block">
+                <div class="title">BLACK SANTA</div>
+                <div id="ton-connect"></div>
+            </div>
             <div class="game-info">
                 Make predictions of 6 numbers in line, put your Tickets on them till
                 the last prediction day. Win. Get TON! Easy!
@@ -34,22 +37,27 @@
         <div class="second-block">
             <div class="tickets-balance__wrapper">
                 <div class="tickets-balance-text">My Tickets Balance</div>
-                <div class="square"></div>
+                <div class="arrow">
+                    <div></div>
+                </div>
                 <div class="balance">0</div>
+                <div class="square"></div>
             </div>
             <button class="buy-tickets" id="buy-ton">Buy Tickets</button>
         </div>
         <div class="third-block">
-            <div class="my-prediction__wrapper">
-                <div class="my-prediction-text">My prediction</div>
-                <input maxlength="6" class="make-prediction-input">
+            <div class="prediction-tickets__wrapper">
+                <div class="my-prediction__wrapper">
+                    <div class="my-prediction-text">Prediction</div>
+                    <input maxlength="6" class="make-prediction-input">
+                </div>
+                <div class="my-prediction__wrapper">
+                    <div class="my-prediction-text">Tickets Amount</div>
+                    <input class="make-prediction-input" value="1" maxlength="6">
+                </div>
             </div>
-            <div class="make-prediction__wrapper">
-                <button class="make-prediction-button">Make prediction(Minimum 1 ticket)</button>
-                <input class="tickets-amount" value="1" maxlength="6">
-            </div>
-            <button class="my-predictions" id="my-predictons">My Predictions</button>
-            <div id="ton-connect"></div>
+            <button class="make-prediction-button">Bet in Tickets</button>
+            <button class="my-predictions" id="my-predictons">My predictions</button>
         </div>
      </main>
 

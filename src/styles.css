@@ -43,37 +43,43 @@ main {
 }
 
 .first-block {
-    height: 45vh;
+    height: 42vh;
     border-bottom: 1px solid white;
 }
 
 .second-block {
-    height: 25vh;
+    height: 22vh;
     border-bottom: 1px solid white;
 }
 
 .third-block {
-    height: calc(30vh - 5px);
+    height: calc(36vh - 5px);
     border-bottom: 4px solid white;
 }
 
-.project-title {
-    width: 40%;
-    height: 15%;
-    font-family: "ConcertOne", sans-serif;
-    font-size: 1rem;
+.project-title-block {
+    width: 95%;
+    display: inline-flex;
+}
 
-    border: 1px solid white;
-
+.title {
+    width: 65%;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    font-size: 1.2rem;
+    font-family: "ConcertOne", sans-serif;
+    letter-spacing: 4px;
+}
+#ton-connect {
+    padding-top: 5px;
 }
 
 .game-info {
-    width: 80%;
+    width: 90%;
     height: 22%;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-family: "ConcertOne", sans-serif;
 
     border: 1px solid white;
@@ -186,7 +192,7 @@ main {
 .tickets-balance__wrapper {
     margin-top: 20px;
 
-    width: 90%;
+    width: 95%;
     height: 25%;
     display: flex;
     flex-direction: row;
@@ -228,7 +234,7 @@ main {
 }
 
 .buy-tickets {
-    margin-top: 40px;
+    margin-top: 30px;
 
     width: 90%;
     height: 35%;
@@ -250,17 +256,26 @@ main {
     background-color: grey;
 }
 
+.prediction-tickets__wrapper {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .my-prediction__wrapper {
     margin-top: 20px;
 
     display: flex;
-    justify-content: space-between;
-    width: 90%;
-    height: 18%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 40%;
+    height: 100%;
 }
 
 .my-prediction-text {
-    width: 50%;
+    width: 60%;
     border: 1px solid white;
     border-radius: 10px;
 
@@ -273,27 +288,26 @@ main {
 }
 
 .make-prediction-input {
-    width: 40%;
-
     background-color: transparent;
     border: 1px solid white;
     border-radius: 10px;
     color: white;
-
+    width: 80%;
+    height: 40%;
     text-align: center;
     font-size: 0.75rem;
 }
 
-.make-prediction__wrapper {
+/* .make-prediction__wrapper {
     margin-top: 25px;
 
     width: 90%;
     height: 25%;
     display: flex;
     justify-content: space-between;
-}
+} */
 
-.make-prediction-button, .tickets-amount {
+.make-prediction-button {
     border: 1px solid white;
     border-radius: 10px;
     color: white;
@@ -301,20 +315,16 @@ main {
 
     font-family: "Poppins", sans-serif;
     text-align: center;
-}
 
-.make-prediction-button {
-    width: 50%;
+    margin-top: 25px;
     font-size: 0.6rem;
+
+    width: 90%;
+    height: 22%;
 }
 
 .make-prediction-button:hover {
     background-color: grey;
-}
-
-.tickets-amount {
-    width: 40%;
-    font-size: 0.75rem;
 }
 
 .my-predictions {
